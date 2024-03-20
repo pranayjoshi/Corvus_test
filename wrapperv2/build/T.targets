@@ -1,0 +1,10 @@
+<Project>
+    <Target Name="GenerateCode" BeforeTargets="CoreCompile">
+      <Message Text="GenerateCode target is being executed." Importance="high" />
+      <Exec Command="dotnet run --project ../../CodeGenerationTool/CodeGenerationTool.csproj $(MSBuildProjectFullPath)" />
+    </Target>
+  
+    <ItemGroup>
+      <Compile Include="../GeneratedCode.cs" />
+    </ItemGroup>
+  </Project>

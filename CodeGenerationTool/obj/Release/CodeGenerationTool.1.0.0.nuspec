@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>CodeGenerationTool</id>
+    <version>1.0.0</version>
+    <authors>CodeGenerationTool</authors>
+    <description>Package Description</description>
+    <repository type="git" commit="90e1b267c62da2a10c97b60f245ba2cfd0b3c546" />
+    <dependencies>
+      <group targetFramework="net8.0">
+        <dependency id="Microsoft.CodeAnalysis" version="4.9.2" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="/Users/pranayjoshi/Desktop/projects/CSharp/stf/CodeGenerationTool/bin/Release/net8.0/CodeGenerationTool.runtimeconfig.json" target="lib/net8.0/CodeGenerationTool.runtimeconfig.json" />
+    <file src="/Users/pranayjoshi/Desktop/projects/CSharp/stf/CodeGenerationTool/bin/Release/net8.0/CodeGenerationTool.dll" target="lib/net8.0/CodeGenerationTool.dll" />
+  </files>
+</package>

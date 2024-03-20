@@ -1,0 +1,12 @@
+/Users/pranayjoshi/Desktop/projects/CSharp/stf/wrapper/obj/Debug/net8.0/wrapper.GeneratedMSBuildEditorConfig.editorconfig
+/Users/pranayjoshi/Desktop/projects/CSharp/stf/wrapper/obj/Debug/net8.0/wrapper.AssemblyInfoInputs.cache
+/Users/pranayjoshi/Desktop/projects/CSharp/stf/wrapper/obj/Debug/net8.0/wrapper.AssemblyInfo.cs
+/Users/pranayjoshi/Desktop/projects/CSharp/stf/wrapper/obj/Debug/net8.0/wrapper.csproj.CoreCompileInputs.cache
+/Users/pranayjoshi/Desktop/projects/CSharp/stf/wrapper/obj/Debug/net8.0/wrapper.sourcelink.json
+/Users/pranayjoshi/Desktop/projects/CSharp/stf/wrapper/bin/Debug/net8.0/wrapper.deps.json
+/Users/pranayjoshi/Desktop/projects/CSharp/stf/wrapper/bin/Debug/net8.0/wrapper.dll
+/Users/pranayjoshi/Desktop/projects/CSharp/stf/wrapper/bin/Debug/net8.0/wrapper.pdb
+/Users/pranayjoshi/Desktop/projects/CSharp/stf/wrapper/obj/Debug/net8.0/wrapper.dll
+/Users/pranayjoshi/Desktop/projects/CSharp/stf/wrapper/obj/Debug/net8.0/refint/wrapper.dll
+/Users/pranayjoshi/Desktop/projects/CSharp/stf/wrapper/obj/Debug/net8.0/wrapper.pdb
+/Users/pranayjoshi/Desktop/projects/CSharp/stf/wrapper/obj/Debug/net8.0/ref/wrapper.dll
