@@ -1,0 +1,8 @@
+/Users/pranayjoshi/Desktop/projects/CSharp/stf/Communicate/obj/Debug/net8.0/Communicate.csproj.AssemblyReference.cache
+/Users/pranayjoshi/Desktop/projects/CSharp/stf/Communicate/obj/Debug/net8.0/Communicate.csproj.SuggestedBindingRedirects.cache
+/Users/pranayjoshi/Desktop/projects/CSharp/stf/Communicate/obj/Debug/net8.0/Communicate.dll.config
+/Users/pranayjoshi/Desktop/projects/CSharp/stf/Communicate/obj/Debug/net8.0/Communicate.GeneratedMSBuildEditorConfig.editorconfig
+/Users/pranayjoshi/Desktop/projects/CSharp/stf/Communicate/obj/Debug/net8.0/Communicate.AssemblyInfoInputs.cache
+/Users/pranayjoshi/Desktop/projects/CSharp/stf/Communicate/obj/Debug/net8.0/Communicate.AssemblyInfo.cs
+/Users/pranayjoshi/Desktop/projects/CSharp/stf/Communicate/obj/Debug/net8.0/Communicate.csproj.CoreCompileInputs.cache
+/Users/pranayjoshi/Desktop/projects/CSharp/stf/Communicate/obj/Debug/net8.0/Communicate.sourcelink.json

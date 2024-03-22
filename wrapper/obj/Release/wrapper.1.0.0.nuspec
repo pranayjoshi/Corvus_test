@@ -5,12 +5,13 @@
     <version>1.0.0</version>
     <authors>wrapper</authors>
     <description>Package Description</description>
-    <repository type="git" commit="90e1b267c62da2a10c97b60f245ba2cfd0b3c546" />
+    <repository type="git" commit="3bacab1636a8164f1c00097623e4369e36011bf4" />
     <dependencies>
       <group targetFramework="net8.0" />
     </dependencies>
   </metadata>
   <files>
     <file src="/Users/pranayjoshi/Desktop/projects/CSharp/stf/wrapper/bin/Release/net8.0/wrapper.dll" target="lib/net8.0/wrapper.dll" />
+    <file src="/Users/pranayjoshi/Desktop/projects/CSharp/stf/CodeGenerationTool/CodeGenerationTool.csproj" target="tools/CodeGenerationTool.csproj" />
   </files>
 </package>

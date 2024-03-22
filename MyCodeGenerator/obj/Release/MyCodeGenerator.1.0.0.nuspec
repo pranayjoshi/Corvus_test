@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>MyCodeGenerator</id>
+    <version>1.0.0</version>
+    <authors>Your Name</authors>
+    <description>A code generation tool for .NET projects.</description>
+    <tags>code-generation</tags>
+    <repository type="git" commit="3bacab1636a8164f1c00097623e4369e36011bf4" />
+    <dependencies>
+      <group targetFramework="net8.0">
+        <dependency id="CodeGenerationTool" version="1.0.0" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="/Users/pranayjoshi/Desktop/projects/CSharp/stf/MyCodeGenerator/bin/Release/net8.0/MyCodeGenerator.dll" target="lib/net8.0/MyCodeGenerator.dll" />
+    <file src="/Users/pranayjoshi/Desktop/projects/CSharp/stf/MyCodeGenerator/build/MyCodeGenerator.targets" target="build/MyCodeGenerator.targets" />
+  </files>
+</package>

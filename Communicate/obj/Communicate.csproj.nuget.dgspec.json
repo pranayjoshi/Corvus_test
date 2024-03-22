@@ -42,6 +42,20 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.Build": {
+              "target": "Package",
+              "version": "[16.10.0, )"
+            },
+            "Microsoft.Build.Locator": {
+              "target": "Package",
+              "version": "[1.7.8, )"
+            },
+            "Microsoft.CodeAnalysis.Csharp": {
+              "target": "Package",
+              "version": "[4.9.2, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

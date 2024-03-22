@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project>
+  <Target Name="GenerateCode" BeforeTargets="CoreCompile">
+    <Message Text="Before GenerateCode target" Importance="high" />
+    <Message Text="GenerateCode target is executing." Importance="high" />
+    <Exec Command="dotnet run --project ../CodeGenerationTool/CodeGenerationTool.csproj $(MSBuildProjectFullPath)" />
+    <Message Text="After GenerateCode target" Importance="high" />
+  </Target>
+
+  <ItemGroup>
+    <Compile Include="../wrapper/GeneratedCode.cs" />
+  </ItemGroup>
+</Project>
