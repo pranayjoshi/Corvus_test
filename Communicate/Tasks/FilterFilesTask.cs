@@ -1,8 +1,9 @@
-// FilterFilesTask.cs
+using System;
+using System.Collections.Generic;
 using Microsoft.Build.Framework;
 using Microsoft.Build.Utilities;
 
-namespace MyCodeGenerator
+namespace CodeGenerator
 {
     public class FilterFilesTask : Task
     {

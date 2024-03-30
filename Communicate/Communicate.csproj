@@ -6,9 +6,18 @@
   </PropertyGroup>
 
   <ItemGroup>
+      <PackageReference Include="Google.Protobuf" Version="3.26.0" />
+      <PackageReference Include="Grpc.Net.Client" Version="2.61.0" />
+      <PackageReference Include="Grpc.Tools" Version="2.62.0">
+        <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+        <PrivateAssets>all</PrivateAssets>
+      </PackageReference>
       <PackageReference Include="Microsoft.Build" Version="16.10.0" />
-
+      
     <PackageReference Include="Microsoft.Build.Locator" Version="1.7.8" />
     <PackageReference Include="Microsoft.CodeAnalysis.Csharp" Version="4.9.2" />
+  </ItemGroup>
+  <ItemGroup>
+    <Protobuf Include="./Services/GeneratorService.proto" GrpcServices="Client" />
   </ItemGroup>
 </Project>

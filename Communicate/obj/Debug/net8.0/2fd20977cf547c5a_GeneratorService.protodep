@@ -1,0 +1,2 @@
+obj/Debug/net8.0/./Services/GeneratorService.cs \
+obj/Debug/net8.0/./Services/GeneratorServiceGrpc.cs: Services/GeneratorService.proto

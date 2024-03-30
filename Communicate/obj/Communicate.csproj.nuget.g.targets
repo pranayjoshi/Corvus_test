@@ -3,5 +3,6 @@
   <ImportGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
     <Import Project="$(NuGetPackageRoot)microsoft.codeanalysis.analyzers/3.3.4/buildTransitive/Microsoft.CodeAnalysis.Analyzers.targets" Condition="Exists('$(NuGetPackageRoot)microsoft.codeanalysis.analyzers/3.3.4/buildTransitive/Microsoft.CodeAnalysis.Analyzers.targets')" />
     <Import Project="$(NuGetPackageRoot)microsoft.build.locator/1.7.8/build/Microsoft.Build.Locator.targets" Condition="Exists('$(NuGetPackageRoot)microsoft.build.locator/1.7.8/build/Microsoft.Build.Locator.targets')" />
+    <Import Project="$(NuGetPackageRoot)grpc.tools/2.62.0/build/Grpc.Tools.targets" Condition="Exists('$(NuGetPackageRoot)grpc.tools/2.62.0/build/Grpc.Tools.targets')" />
   </ImportGroup>
 </Project>

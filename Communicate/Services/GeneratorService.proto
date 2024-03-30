@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+service GeneratorService {
+    rpc GenerateCode (GenerateCodeRequest) returns (GenerateCodeResponse) {}
+}
+
+message GenerateCodeRequest {
+    string sourceCode = 1;
+    // Add any additional request fields
+}
+
+message GenerateCodeResponse {
+    string generatedCode = 1;
+    DependencyTree dependencyTree = 2;
+    // Add any additional response fields
+}

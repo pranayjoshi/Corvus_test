@@ -1,52 +1,63 @@
 // CodeGenerationTask.cs
 using Microsoft.Build.Framework;
 using Microsoft.Build.Utilities;
-using Microsoft.CodeAnalysis;
-using Microsoft.CodeAnalysis.CSharp;
+using Grpc.Net.Client;
+using static GeneratorService;
+using System.Threading;
 using System.Threading.Tasks;
+using System;
+// using Newtonsoft.Json;
 
 namespace MyCodeGenerator
 {
     public class CodeGenerationTask : Task
     {
+        public CodeGenerationTask(Action action, CancellationToken cancellationToken) : base(action, cancellationToken)
+        {
+        }
+
         [Required]
-        public ITaskItem[] FilteredFiles { get; set; }
+        public string[] FilteredJsons { get; set; }
+
+        [Required]
+        public CancellationToken CancellationToken { get; set; }
+
+        [Required]
+        public string GeneratorServiceAddress { get; set; }
 
         [Output]
-        public ITaskItem[] GeneratedFiles { get; set; }
+        public string[] GeneratedJsons { get; set; }
 
         public override bool Execute()
         {
-            var generatedFiles = new List<ITaskItem>();
+            var generatedJsons = new List<string>();
 
-            foreach (var file in FilteredFiles)
+            foreach (var json in FilteredJsons)
             {
-                var generatedFile = GenerateCode(file);
-                generatedFiles.Add(generatedFile);
+                CancellationToken.ThrowIfCancellationRequested();
+
+                var generatedJson = GenerateCodeWithService(json, GeneratorServiceAddress);
+                generatedJsons.Add(generatedJson);
             }
 
-            GeneratedFiles = generatedFiles.ToArray();
+            GeneratedJsons = generatedJsons.ToArray();
             return true;
         }
 
-        private ITaskItem GenerateCode(ITaskItem file)
+        private string GenerateCodeWithService(string jsonInput, string grpcUrl)
         {
-            // Read the file content
-            var fileContent = File.ReadAllText(file.ItemSpec);
+            // Create a gRPC channel to the generator service
+            var channel = GrpcChannel.ForAddress(grpcUrl);
+            var client = new GeneratorService.GeneratorServiceClient(channel);
 
-            // Parse the code and generate new code
-            var syntaxTree = CSharpSyntaxTree.ParseText(fileContent);
-            var compilation = CSharpCompilation.Create("MyCodeGenerator")
-                .AddSyntaxTrees(syntaxTree);
+            // Call the generator service
+            var request = new GenerateCodeRequest { SourceCode = jsonInput };
+            var response = client.GenerateCode(request);
 
-            // Implement your code generation logic here
-            var generatedCode = "// Generated code goes here";
+            // Convert the generated code to JSON
+            var generatedCode = response.GeneratedCode;
 
-            // Create a new file for the generated code
-            var generatedFilePath = Path.Combine(Path.GetTempPath(), $"{Guid.NewGuid()}.cs");
-            File.WriteAllText(generatedFilePath, generatedCode);
-
-            return new TaskItem(generatedFilePath);
+            return generatedCode;
         }
     }
 }
