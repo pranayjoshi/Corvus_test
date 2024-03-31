@@ -149,6 +149,13 @@ public class CodeGenerationSettings
     public string JsonPath { get; set; }
     public bool GenerateClasses { get; set; }
     public bool GenerateEnums { get; set; }
+    public string RootNamespace { get; set; }
+    public string RootPath { get; set; }
+    public string UseSchema { get; set; } = "Draft201909";
+    public string OutputMapFile { get; set; }
+    public string OutputPath { get; set; }
+    public string OutputRootTypeName { get; set; }
+    public bool RebaseToRootPath { get; set; }
 
     public CodeGenerationSettings ToProtobuf()
     {
@@ -157,7 +164,14 @@ public class CodeGenerationSettings
             OutputDirectory = OutputDirectory,
             JsonPath = JsonPath,
             GenerateClasses = GenerateClasses,
-            GenerateEnums = GenerateEnums
+            GenerateEnums = GenerateEnums,
+            RootNamespace = RootNamespace,
+            RootPath = RootPath,
+            UseSchema = UseSchema,
+            OutputMapFile = OutputMapFile,
+            OutputPath = OutputPath,
+            OutputRootTypeName = OutputRootTypeName,
+            RebaseToRootPath = RebaseToRootPath
         };
     }
 }
